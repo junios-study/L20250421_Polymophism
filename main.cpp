@@ -3,48 +3,24 @@
 #include "Monster.h"
 #include "Goblin.h"
 #include "Slime.h"
+#include "World.h"
 
 using namespace std;
 
-class A
-{
-public:
-	virtual void Do()
-	{
-
-	}
-};
-
-class B : public A
-{
-public:
-	//가상함수 테이블 __vfptr [][][][][][][]
-	virtual void Do() override
-	{
-
-	}
-};
-
 int main()
 {
-	vector<AActor*> Actors;
+    UWorld* MyWorld = new UWorld();
 
-	Actors.push_back(new ASlime());
-	Actors.push_back(new AGoblin());
+    MyWorld->SpawnActor(new AGoblin());
+    MyWorld->SpawnActor(new ASlime());
+    //Player, Boar
+    //MyWorld->SpawnActor(new AGoblin());
+    //MyWorld->SpawnActor(new AGoblin());
 
-	////모든 몬스터가 이동한다.
-	for (auto Actor : Actors)
-	{
-		//다형성
-		Actor->Tick();
-	}
+    MyWorld->Run();
 
-	//ASlime* Slime = new ASlime();
-	//Slime->Move();
-
-	//AGoblin* Goblin = new AGoblin();
-	//Goblin->Move();
-
+    delete MyWorld;
+    MyWorld = nullptr;
 
  	return 0;
 }

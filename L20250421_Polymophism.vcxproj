@@ -135,6 +135,7 @@
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Slime.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="A.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="Money.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Slime.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
