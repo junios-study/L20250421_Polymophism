@@ -23,11 +23,10 @@ using namespace std;
 
 int main()
 {
-	AMonster* Monster = nullptr;
+	vector<AMonster*> Monsters;
 
 	//생성 삭제를 조절 할수 있다.
-	Monster = new AMonster();
-	delete Monster;
+	Monsters.push_back( new AMonster());
 
 
 	return 0;
