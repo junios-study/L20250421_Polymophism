@@ -4,6 +4,8 @@
 #include "Goblin.h"
 #include "Slime.h"
 #include "World.h"
+#include "Boar.h"
+#include "Player.h"
 
 using namespace std;
 
@@ -14,8 +16,8 @@ int main()
     MyWorld->SpawnActor(new AGoblin());
     MyWorld->SpawnActor(new ASlime());
     //Player, Boar
-    //MyWorld->SpawnActor(new AGoblin());
-    //MyWorld->SpawnActor(new AGoblin());
+    MyWorld->SpawnActor(new APlayer());
+    MyWorld->SpawnActor(new ABoar());
 
     MyWorld->Run();
 

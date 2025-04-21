@@ -129,21 +129,25 @@
   <ItemGroup>
     <ClCompile Include="A.cpp" />
     <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="Boar.cpp" />
     <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Money.cpp" />
     <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Slime.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="A.h" />
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="Boar.h" />
     <ClInclude Include="Calculator.h" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="Money.h" />
     <ClInclude Include="Monster.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Slime.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
