@@ -1,33 +1,50 @@
 #include <iostream>
 #include <vector>
 #include "Monster.h"
+#include "Goblin.h"
+#include "Slime.h"
 
 using namespace std;
 
-//메모리 구조
-//Code
-//Data : Global
-//Heap 
-// int -> 0x333003(1)
-// Monster -> 0x56566()
-// 
-// ADD()
-// -------------------
-// Monster[AMonster*] -> 0x4444(0x56566)
-// PA[int*] -> 0x2222(0x333003)
-// A[int] -> 0x1121(1)
-// Main()
-//Stack
+class A
+{
+public:
+	virtual void Do()
+	{
 
+	}
+};
 
+class B : public A
+{
+public:
+	//가상함수 테이블 __vfptr [][][][][][][]
+	virtual void Do() override
+	{
+
+	}
+};
 
 int main()
 {
-	vector<AMonster*> Monsters;
+	vector<AActor*> Actors;
 
-	//생성 삭제를 조절 할수 있다.
-	Monsters.push_back( new AMonster());
+	Actors.push_back(new ASlime());
+	Actors.push_back(new AGoblin());
+
+	////모든 몬스터가 이동한다.
+	for (auto Actor : Actors)
+	{
+		//다형성
+		Actor->Tick();
+	}
+
+	//ASlime* Slime = new ASlime();
+	//Slime->Move();
+
+	//AGoblin* Goblin = new AGoblin();
+	//Goblin->Move();
 
 
-	return 0;
+ 	return 0;
 }
