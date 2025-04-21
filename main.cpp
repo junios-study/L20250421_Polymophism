@@ -4,28 +4,23 @@
 
 using namespace std;
 
-
-
+//메모리 구조
+//Code
+//Data
+//Heap
+// 
+// PA[int*] -> 0x2222(0x1121)
+// A[int] -> 0x1121(1)
+//Stack
 
 int main()
 {
-	vector<AMonster*> Monsters;
+	//OS 요청
+	int A = 1;
+	int* PA = &A;
 
-	Monsters.push_back(new AMonster());
-	Monsters.push_back(new AMonster());
-	Monsters.push_back(new AMonster());
+	cout << *PA << endl;
 
-	vector<AMonster*>::iterator iter = Monsters.begin();
-	iter++;
-	delete (*iter);
-	Monsters.erase(iter);
-
-	for (auto Monster : Monsters)
-	{
-		delete Monster;
-	}
-
-	Monsters.clear();
 
 	return 0;
 }
