@@ -4,10 +4,13 @@
 
 using namespace std;
 
+
+
+
 int main()
 {
 	vector<AMonster*> Monsters;
-	
+
 	Monsters.push_back(new AMonster());
 	Monsters.push_back(new AMonster());
 	Monsters.push_back(new AMonster());
@@ -17,12 +20,12 @@ int main()
 	delete (*iter);
 	Monsters.erase(iter);
 
-	//for (auto Monster : Monsters)
-	//{
-	//	delete Monster;
-	//}
+	for (auto Monster : Monsters)
+	{
+		delete Monster;
+	}
 
-//	Monsters.clear();
+	Monsters.clear();
 
 	return 0;
 }
