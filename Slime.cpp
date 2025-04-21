@@ -11,6 +11,11 @@ ASlime::~ASlime()
 {
 }
 
+void ASlime::Tick()
+{
+	Move();
+}
+
 void ASlime::Move()
 {
 	cout << "¹Ì²ô·¯Áø´Ù." << endl;

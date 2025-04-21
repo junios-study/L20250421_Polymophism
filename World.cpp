@@ -11,9 +11,12 @@ UWorld::~UWorld()
 
 void UWorld::Run()
 {
-	for (auto Actor : Actors)
+	while (true)
 	{
-		Actor->Tick();
+		for (auto Actor : Actors)
+		{
+			Actor->Tick();
+		}
 	}
 }
 
